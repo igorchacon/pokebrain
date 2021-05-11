@@ -1,5 +1,7 @@
 import React from "react";
-import HomeScreen from "../screens/HomeScreen/HomeScreen"
+import HomeScreen from "../screens/HomeScreen/HomeScreen";
+import PokedexScreen from "../screens/PokedexScreen/PokedexScreen";
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const Router = () => {
@@ -12,7 +14,7 @@ const Router = () => {
 
             <Switch>
                 {/* Pokedex Screen */}
-                <Route exact path="/pokedex" />
+                <Route exact path="/pokedex" component={PokedexScreen}/>
             </Switch>
 
             <Switch>
@@ -20,9 +22,6 @@ const Router = () => {
                 <Route exact path="/detail/:name" />
             </Switch>
 
-            <Switch>
-                <div>Error 404 - Sorry, this page does not exist...</div>
-            </Switch>
         </BrowserRouter>
     );
 };
