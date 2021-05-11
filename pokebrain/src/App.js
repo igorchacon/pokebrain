@@ -1,11 +1,15 @@
 import './App.css';
+import Router from './routers/Router';
+import GlobalState from "./global/GlobalState";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+      
+        <GlobalState>
+          <Router />
+        </GlobalState>
+      
     </div>
   );
 }

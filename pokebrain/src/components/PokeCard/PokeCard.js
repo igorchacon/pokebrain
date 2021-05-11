@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import {
   PokemonImage,
   CardContainer,
@@ -28,7 +28,7 @@ const PokeCard = (props) => {
 
         const newPokeList = [...pokemons];
 
-        newPokeList.splice(podeIndex, 1);
+        newPokeList.splice(pokeIndex, 1);
 
         const orderedPokemons = newPokeList.sort((a, b) => {
             return a.id = b.id;

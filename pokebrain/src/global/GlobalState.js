@@ -24,7 +24,7 @@ const GlobalState = (props) => {
                 
                     newList.push(response.data);
                     
-                    // limitar à renderização de 20 pokemons e ordená-los alfabeticamente por nome
+                    // ordenar os 20 pokemons que vem por default em ordem alfabeticamente por nome
                     if (newList.length === 20) {
                         const orderedList = newList.sort((a, b) => {
                             return a.id - b.id;

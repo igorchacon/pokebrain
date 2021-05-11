@@ -1,4 +1,5 @@
 import React from "react";
+import HomeScreen from "../screens/HomeScreen/HomeScreen"
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const Router = () => {
@@ -6,7 +7,7 @@ const Router = () => {
         <BrowserRouter>
             <Switch>
                 {/* Home Screen */}
-                <Route exact path="/" />
+                <Route exact path="/" component={HomeScreen}/>
             </Switch>
 
             <Switch>
