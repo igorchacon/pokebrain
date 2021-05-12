@@ -1,14 +1,16 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import Header from '../../components/Header/Header';
 import { goToHomeScreen } from '../../routers/Conductor';
 import useRequest from '../../hooks/useRequest';
+import { BASE_URL } from '../../constants/urls.js';
+
 
 const RegionsScreen = () => {
 
     const history = useHistory();
 
-    const regions = useRequest("https://pokeapi.co/api/v2/location/", [])
+    const regions = useRequest(`${BASE_URL}/location/?=100`, []);
 
     return (
         
@@ -20,7 +22,7 @@ const RegionsScreen = () => {
             <h1>List of Pokemon cities!</h1>
             <div>
                 {regions[0].results?.map((region) => {
-                    return <table> <tr><th>City name:</th> <td>{region.name.replace("-", " ")}</td></tr>  </table>
+                    return <h3> {region.name.replace("-", " ")} </h3>
                 })}
             </div>
         </>

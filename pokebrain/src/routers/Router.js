@@ -2,6 +2,7 @@ import React from "react";
 import HomeScreen from "../screens/HomeScreen/HomeScreen";
 import PokedexScreen from "../screens/PokedexScreen/PokedexScreen";
 import RegionsScreen from "../screens/RegionsScreen/RegionsScreen";
+import ItemsScreen from "../screens/ItemsScreen/ItemsScreen";
 
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -22,6 +23,11 @@ const Router = () => {
             <Switch>
                 {/* Pokemon detail Screen */}
                 <Route exact path="/detail/:name" />
+            </Switch>
+
+            <Switch>
+                {/* Pokemon detail Screen */}
+                <Route exact path="/items" component={ItemsScreen}/>
             </Switch>
 
             <Switch>
