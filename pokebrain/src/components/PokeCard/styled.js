@@ -11,13 +11,7 @@ export const CardContainer = styled.div`
 `;
 
 export const BContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  height: 40px;
-  padding: 10px;
-  width: 180px;
 `;
 
 export const NameText = styled.h2`
@@ -30,6 +24,5 @@ export const PokemonImage = styled.img`
 `;
 
 export const ButtonsContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  align-items: center;
 `;

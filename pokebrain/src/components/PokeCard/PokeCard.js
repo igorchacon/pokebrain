@@ -79,9 +79,6 @@ const PokeCard = (props) => {
                     <button onClick={props.isPokedex ? removeFromPokedex : addToPokedex }>
                         {props.isPokedex ? "Remove from Pokedex" : "Add to Pokedex"}
                     </button>
-                    <button onClick={() => {goToDetailsScreen(history, props.poke.name)}}>
-                        Show Pokemon Details
-                    </button>
                 </ButtonsContainer>
             </BContainer>
         </CardContainer>

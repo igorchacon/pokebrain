@@ -10,13 +10,13 @@ const Header = ({ leftButtonFunction, title }) => {
     const leftButtonTitle = () => {
         switch (title) {
           case "Pokemon List":
-            return "Go to Pokedex";
+            return "Pokedex";
           case "Pokedex":
-            return "Go back to Pokemon Screen";
+            return "Home";
           case "Cities":
-              return "Go back to Pokemon Screen";
+              return "Home";
           case "Items":
-              return "Go back to Pokemon Screen";
+              return "Home";
           default:
             return "Back";
         }
@@ -27,7 +27,7 @@ const Header = ({ leftButtonFunction, title }) => {
             <LeftHeaderButton onClick={leftButtonFunction}>{leftButtonTitle()}</LeftHeaderButton>
             <RegionsButton onClick={() => {goToRegionsScreen(history)}}>Cities</RegionsButton>
             <ItemsButton onClick={() => {goToItemsScreen(history)}}>Items</ItemsButton>
-            <h1>{title}</h1>
+            <h1>PokeBrain</h1>
             <RightHeaderButton onClick={() => history.goBack()}>Back</RightHeaderButton>
         </HeaderContainer>
     )
