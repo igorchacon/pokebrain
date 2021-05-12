@@ -25,3 +25,8 @@ export const RegionsButton = styled.button`
   position: absolute;
   left: 200px;
 `;
+
+export const ItemsButton = styled.button`
+  position: absolute;
+  left: 300px;
+`;

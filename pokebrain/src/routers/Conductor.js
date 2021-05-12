@@ -14,6 +14,10 @@ export const goToRegionsScreen = (history) => {
     history.push("/regions")
 }
 
+export const goToItemsScreen = (history) => {
+    history.push("/items")
+}
+
 export const goBack = (history) => {
     history.goBack();
 }
