@@ -18,12 +18,13 @@ const HomeScreen = () => {
                 leftButtonFunction={() => {gotToPokedexUserScreen(history)}}
             />
 
+            <h1>Try to add a pokemon to your Pokedex!</h1>
+
             <PokeListContainer>
                 {pokemons && pokemons.map((pokemon) => {
                     return (
                         <div>
                             {<PokeCard 
-
                                 name={pokemon.name}
                                 key={pokemon.name}
                                 poke={pokemon}

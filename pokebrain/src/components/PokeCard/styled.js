@@ -10,7 +10,7 @@ export const CardContainer = styled.div`
   margin: 10px;
 `;
 
-export const PriceContainer = styled.div`
+export const BContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,10 +18,6 @@ export const PriceContainer = styled.div`
   height: 40px;
   padding: 10px;
   width: 180px;
-`;
-
-export const PriceText = styled.h3`
-  margin: 0;
 `;
 
 export const NameText = styled.h2`

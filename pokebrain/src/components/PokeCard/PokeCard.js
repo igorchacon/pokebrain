@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import {
   PokemonImage,
   CardContainer,
-  PriceContainer,
+  BContainer,
   NameText,
   ButtonsContainer
 } from "./styled";
@@ -74,7 +74,7 @@ const PokeCard = (props) => {
 
             <NameText>{props.name}</NameText>
             
-            <PriceContainer>
+            <BContainer>
                 <ButtonsContainer>
                     <button onClick={props.isPokedex ? removeFromPokedex : addToPokedex }>
                         {props.isPokedex ? "Remove from Pokedex" : "Add to Pokedex"}
@@ -83,7 +83,7 @@ const PokeCard = (props) => {
                         Show Pokemon Details
                     </button>
                 </ButtonsContainer>
-            </PriceContainer>
+            </BContainer>
         </CardContainer>
     )
 }

@@ -20,3 +20,8 @@ export const RightHeaderButton = styled.button`
   position: absolute;
   right: 10px;
 `;
+
+export const RegionsButton = styled.button`
+  position: absolute;
+  left: 200px;
+`;

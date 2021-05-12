@@ -27,8 +27,8 @@ const GlobalState = (props) => {
                 
                     newList.push(response.data);
                     
-                    // ordenar os 20 pokemons que vem por default em ordem alfabeticamente por nome
-                    if (newList.length === 20) {
+                    // ordenar os pokemons em ordem alfabeticamente por nome
+                    if (newList.length === 150) {
                         const orderedList = newList.sort((a, b) => {
                             return a.id - b.id;
                         });
@@ -41,10 +41,9 @@ const GlobalState = (props) => {
 
     const getPokemonNames = () => {
         axios
-            .get(`${BASE_URL}/pokemon`)
+            .get(`${BASE_URL}/pokemon/?limit=150`)
             .then((response) => {
                 setPokemonNames(response.data.results);
-                console.log(response.data.results);
             })
             .catch((error) => console.error(error))
     };
