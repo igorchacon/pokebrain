@@ -3,7 +3,7 @@ import axios from "axios";
 
 // hook para realizar as requisições para a api
 
-const useRequestData = (initialData, url) => {
+const useRequest = (url, initialData) => {
     const [data, setData] = useState(initialData);
 
     useEffect(() => {
@@ -20,4 +20,4 @@ const useRequestData = (initialData, url) => {
     return [data];
 };
 
-export default useRequestData;
+export default useRequest;

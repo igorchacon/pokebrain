@@ -21,7 +21,7 @@ const PokeCard = (props) => {
     );
 
     // função para adicionar o pokemon na pokedex
-    const AddToPokedex = () => {
+    const addToPokedex = () => {
         const pokeIndex = pokemons.findIndex(
             (item) => item.name === props.poke.name
         );
@@ -44,6 +44,27 @@ const PokeCard = (props) => {
         setPokemons(orderedPokemons);
     };
 
+    // função para retirar o pokemon na pokedex
+    const removeFromPokedex = () => {
+        const pokeIndex = pokedex.findIndex(
+          (item) => item.name === props.poke.name
+        );
+
+        const newPokedexList = [...pokedex];
+        newPokedexList.splice(pokeIndex, 1);
+        const orderedPokedex = newPokedexList.sort((a, b) => {
+        return a.id - b.id;
+        });
+
+        const newPokemonsList = [...pokemons, props.poke];
+        const orderedPokemons = newPokemonsList.sort((a, b) => {
+        return a.id - b.id;
+        });
+
+        setPokedex(orderedPokedex);
+        setPokemons(orderedPokemons);
+    };
+
     return (
         <CardContainer>
             <PokemonImage
@@ -55,7 +76,9 @@ const PokeCard = (props) => {
             
             <PriceContainer>
                 <ButtonsContainer>
-                    <button onClick={AddToPokedex}>Add Pokemon to your Pokedex</button>
+                    <button onClick={props.isPokedex ? removeFromPokedex : addToPokedex }>
+                        {props.isPokedex ? "Remove from Pokedex" : "Add to Pokedex"}
+                    </button>
                     <button onClick={() => {goToDetailsScreen(history, props.poke.name)}}>
                         Show Pokemon Details
                     </button>

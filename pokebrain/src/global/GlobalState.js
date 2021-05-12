@@ -9,9 +9,12 @@ const GlobalState = (props) => {
     const [pokemons, setPokemons] = useState([]);
     const [pokedex, setPokedex] = useState([]);
 
+
     useEffect(() => {
         getPokemonNames();
     }, []);
+
+    
 
     useEffect(() => {
         const newList = [];
@@ -41,6 +44,7 @@ const GlobalState = (props) => {
             .get(`${BASE_URL}/pokemon`)
             .then((response) => {
                 setPokemonNames(response.data.results);
+                console.log(response.data.results);
             })
             .catch((error) => console.error(error))
     };
