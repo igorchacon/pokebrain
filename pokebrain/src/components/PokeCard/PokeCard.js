@@ -8,7 +8,6 @@ import {
 } from "./styled";
 import GlobalStateContext from '../../global/GlobalStateContext'
 import { useHistory } from "react-router-dom";
-import { goToDetailsScreen } from "../../routers/Conductor";
 
 
 const PokeCard = (props) => {
