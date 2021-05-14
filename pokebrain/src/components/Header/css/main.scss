@@ -1,0 +1,72 @@
+@import '../../../css/main.scss';
+
+$header-color: #ff0066;
+
+.header-container {
+    height: auto;
+    padding: 0 8% 0 5%;
+    background-color: $header-color;
+    background-image: linear-gradient(to right, #ff0066, #fa6855);
+    font-family: "sigmar one"; 
+    display: flex;
+    align-items: center;
+    color: #ffffffe3;
+    position: relative;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+        .header-title {
+            @keyframes TransitioningBackground {
+                0% {
+                  background-position: 1% 0%;
+                }
+                50% {
+                  background-position: 99% 100%;
+                }
+                100% {
+                  background-position: 1% 0%;
+                }
+              }
+              
+              .growth-effect {
+                animation: TransitioningBackground 10s ease infinite;
+                transition: 0.6s;
+              
+                &::before {
+                  filter: blur(30px);
+                  transform: translateX(-100px) skewX(-15deg);
+                }
+              
+                &::after {
+                  filter: blur(5px);
+                  transform: translateX(-100px) skewX(-15deg);
+                }
+              
+                &:hover {
+                  transform: scale(1.2);
+                  cursor: context-menu;
+              
+                  &::before,
+                  &::after {
+                    transform: translateX(300px) skewX(-15deg);
+                    transition: 0.7s;
+                  }
+                }
+              }
+        }
+
+        .buttons-container {
+            display: grid;
+            justify-content: space-around;
+            border: 1px solid;
+        }
+        button {
+            margin: 0 0 1% 0;
+            border-radius: 3px;
+            font-family: "sigmar one";
+        }
+        button:hover {
+            color: $header-color;
+        }
+}

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import GlobalStateContext from '../../global/GlobalStateContext.js'
+import './css/main.scss';
 import { PokeListContainer } from './styled';
 import PokeCard from "../../components/PokeCard/PokeCard";
 import Header from '../../components/Header/Header';
@@ -20,7 +21,7 @@ const HomeScreen = () => {
 
             <h1>Try to add a pokemon to your Pokedex!</h1>
 
-            <PokeListContainer>
+            <div class="pokeListContainer">
                 {pokemons && pokemons.map((pokemon) => {
                     return (
                         <div>
@@ -32,7 +33,7 @@ const HomeScreen = () => {
                         </div>
                     )
                 })}
-            </PokeListContainer>
+            </div>
         </>
     )
 }
