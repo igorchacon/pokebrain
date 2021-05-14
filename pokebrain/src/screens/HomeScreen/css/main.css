@@ -1,3 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@font-face {
+  font-family: "Pokemon";
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg");
+}
+
 .App {
   text-align: center;
 }
@@ -12,5 +19,10 @@
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  font-family: "sigmar one";
+}
+
+.home-call {
+  font-family: "sigmar one";
 }
 /*# sourceMappingURL=main.css.map */

@@ -19,7 +19,7 @@ const HomeScreen = () => {
                 leftButtonFunction={() => {gotToPokedexUserScreen(history)}}
             />
 
-            <h1>Try to add a pokemon to your Pokedex!</h1>
+            <h1 class="home-call">Try to add a pokemon to your Pokedex!</h1>
 
             <div class="pokeListContainer">
                 {pokemons && pokemons.map((pokemon) => {

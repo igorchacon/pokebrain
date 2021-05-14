@@ -9,6 +9,9 @@
 }
 
 @import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+$poke-font: "sigmar one";
+
+$header-color: #ff0066;
 
 .App {
     text-align: center;
@@ -20,4 +23,5 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  font-family: "sigmar one"; 
 }
