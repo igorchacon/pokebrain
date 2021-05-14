@@ -1,26 +1,19 @@
 import React from "react";
-import {
-  ItemImage,
-  CardContainer,
-  BContainer,
-  NameText,
-  ButtonsContainer
-} from "./styled";
+import './css/main.scss';
 
 
 const ItemsCard = (props) => {
 
     return (
-        <CardContainer>
-            {console.log(props)}
-            <ItemImage
+        <div class="card-container">
+            <img class="item-img"
                 src={props.sprites?.default}
                 alt={props.name}
             />
 
-            <NameText>{props.name}</NameText>
+            <div>{props.name}</div>
             <p>{props.item.flavor_text_entries}</p>
-        </CardContainer>
+        </div>
     )
 }
 
