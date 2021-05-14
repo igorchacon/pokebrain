@@ -1,11 +1,5 @@
 import React, { useContext } from "react";
-import {
-  PokemonImage,
-  CardContainer,
-  BContainer,
-  NameText,
-  ButtonsContainer
-} from "./styled";
+import "./css/main.scss"
 import GlobalStateContext from '../../global/GlobalStateContext'
 import { useHistory } from "react-router-dom";
 
@@ -65,22 +59,22 @@ const PokeCard = (props) => {
     };
 
     return (
-        <CardContainer>
-            <PokemonImage
+        <div class="card-container">
+            <img class="pokemon-img"
                 src={props.poke && props.poke.sprites.front_default}
                 alt={props.poke.name}
             />
 
-            <NameText>{props.name}</NameText>
+            <div class="nameText">{props.name}</div>
             
-            <BContainer>
-                <ButtonsContainer>
-                    <button onClick={props.isPokedex ? removeFromPokedex : addToPokedex }>
-                        {props.isPokedex ? "Remove from Pokedex" : "Add to Pokedex"}
-                    </button>
-                </ButtonsContainer>
-            </BContainer>
-        </CardContainer>
+         
+            <div>
+                <button onClick={props.isPokedex ? removeFromPokedex : addToPokedex }>
+                    {props.isPokedex ? "Remove from Pokedex" : "Add to Pokedex"}
+                </button>
+            </div>
+        
+        </div>
     )
 }
 
