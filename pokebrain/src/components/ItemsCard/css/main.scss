@@ -1,0 +1,17 @@
+@import '../../PokeCard/css/main.scss';
+
+.item-img {
+    width: 100%;
+    height: 250px;
+}
+
+.card-container {
+    border: 2px solid;
+    width: 200px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    background-color: red;
+}

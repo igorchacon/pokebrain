@@ -1,0 +1,21 @@
+@import '../../../css/main.scss';
+
+.item-call {
+    font-family: $poke-font;
+}
+
+.pokeListContainer {
+    width: 90%;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.card-item-container {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}

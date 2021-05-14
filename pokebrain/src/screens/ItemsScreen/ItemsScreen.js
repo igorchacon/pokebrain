@@ -3,10 +3,8 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Header from '../../components/Header/Header';
 import { goToHomeScreen } from '../../routers/Conductor';
-import useRequest from '../../hooks/useRequest';
 import { BASE_URL } from '../../constants/urls.js';
-import ItemsCard from "../../components/ItemsCard/ItemsCard";
-import { ItemsContainer } from "./styled";
+import './css/main.scss';
 
 
 const ItemsScreen = () => {
@@ -62,11 +60,11 @@ const ItemsScreen = () => {
                 title={"Items"}
                 leftButtonFunction={() => {goToHomeScreen(history)}}
             />
-            <h1>List of Pokemon items!</h1>
-            <>    
+            <h1 class="item-call">List of Pokemon items!</h1>
+            <div class="pokeListContainer">    
                 {items?.map((item) => {
                     return (
-                        <div>
+                        <div class="card-item-container">
                             <img src={item.sprites.default}></img>
                             <br/>
                             {item.name}
@@ -76,7 +74,7 @@ const ItemsScreen = () => {
                         </div>
                     )
                 })}
-            </>
+            </div>
         </>
     );
 };

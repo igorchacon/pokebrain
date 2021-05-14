@@ -4,7 +4,8 @@ import Header from '../../components/Header/Header';
 import PokeCard from "../../components/PokeCard/PokeCard";
 import GlobalStateContext from '../../global/GlobalStateContext';
 import { PokeListContainer } from './styled';
-import { goToHomeScreen } from '../../routers/Conductor'
+import { goToHomeScreen } from '../../routers/Conductor';
+import './css/main.scss';
 
 const PokedexScreen = () => {
     const history = useHistory();
@@ -16,13 +17,13 @@ const PokedexScreen = () => {
                 title={"Pokedex"}
                 leftButtonFunction={() => {goToHomeScreen(history)}}
             />
-            <PokeListContainer>
+            <div class="pokeListContainer">
                 {pokedex && 
                     pokedex.map((poke) => {
                         return <PokeCard isPokedex key={poke.name} poke={poke} />
                     })
                 }
-            </PokeListContainer>
+            </div >
         </>
     )
 };
