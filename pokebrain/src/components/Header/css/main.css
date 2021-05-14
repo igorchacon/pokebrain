@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@font-face {
+  font-family: "Pokemon";
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg");
+}
+
+.App {
+  text-align: center;
+}
+
+.pokeListContainer {
+  width: 100vw;
+  height: 92vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header-container {
+  height: auto;
+  padding: 0 8% 0 5%;
+  background-color: #ff0066;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff0066), to(#fa6855));
+  background-image: linear-gradient(to right, #ff0066, #fa6855);
+  font-family: "sigmar one";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffffe3;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@-webkit-keyframes TransitioningBackground {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}
+
+@keyframes TransitioningBackground {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}
+
+.header-container .header-title .growth-effect {
+  -webkit-animation: TransitioningBackground 10s ease infinite;
+          animation: TransitioningBackground 10s ease infinite;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.header-container .header-title .growth-effect::before {
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+.header-container .header-title .growth-effect::after {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+.header-container .header-title .growth-effect:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: context-menu;
+}
+
+.header-container .header-title .growth-effect:hover::before, .header-container .header-title .growth-effect:hover::after {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.header-container .buttons-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 1px solid;
+}
+
+.header-container button {
+  margin: 0 0 1% 0;
+  border-radius: 3px;
+  font-family: "sigmar one";
+}
+
+.header-container button:hover {
+  color: #ff0066;
+}
+/*# sourceMappingURL=main.css.map */

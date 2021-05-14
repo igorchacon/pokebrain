@@ -1,6 +1,6 @@
 import React from 'react';
+import './css/main.scss';
 import { useHistory } from "react-router-dom";
-import { HeaderContainer, LeftHeaderButton, RightHeaderButton, RegionsButton, ItemsButton } from "./styled";
 import { goToRegionsScreen, goToItemsScreen } from "../../routers/Conductor";
 
 
@@ -23,13 +23,17 @@ const Header = ({ leftButtonFunction, title }) => {
       };
 
     return (
-        <HeaderContainer>
-            <LeftHeaderButton onClick={leftButtonFunction}>{leftButtonTitle()}</LeftHeaderButton>
-            <RegionsButton onClick={() => {goToRegionsScreen(history)}}>Cities</RegionsButton>
-            <ItemsButton onClick={() => {goToItemsScreen(history)}}>Items</ItemsButton>
-            <h1>PokeBrain</h1>
-            <RightHeaderButton onClick={() => history.goBack()}>Back</RightHeaderButton>
-        </HeaderContainer>
+        <div class="header-container">
+          <div class="buttons-container">
+            <button onClick={leftButtonFunction}>{leftButtonTitle()}</button>
+            <button onClick={() => {goToRegionsScreen(history)}}>Cities</button>
+            <button onClick={() => {goToItemsScreen(history)}}>Items</button>
+          </div>
+          
+          <h1 class="header-title"> <div class="growth-effect">PokeBrain</div> </h1>
+
+          <div></div>
+        </div>
     )
 }
 
