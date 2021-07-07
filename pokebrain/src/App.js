@@ -6,11 +6,9 @@ function App() {
   document.title = 'PokeBrain'
   return (
     <div className="App">
-      
         <GlobalState>
           <Router />
         </GlobalState>
-      
     </div>
   );
 }
